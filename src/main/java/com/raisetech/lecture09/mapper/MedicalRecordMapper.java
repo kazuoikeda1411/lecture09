@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 @Mapper
-public interface MedicalRecordService {
+public interface MedicalRecordMapper {
 	@Select("SELECT * FROM medicalRecords")
 	List<MedicalRecord> findAll();
 

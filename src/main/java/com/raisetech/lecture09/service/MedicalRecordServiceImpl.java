@@ -2,15 +2,15 @@ package com.raisetech.lecture09.service;
 
 import com.raisetech.lecture09.controller.DiseaseResponse;
 import com.raisetech.lecture09.entity.MedicalRecord;
-import com.raisetech.lecture09.mapper.MedicalRecordService;
+import com.raisetech.lecture09.mapper.MedicalRecordMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class MedicalRecordServiceImpl implements com.raisetech.lecture09.service.MedicalRecordService {
-	private final MedicalRecordService medicalRecordMapper;
-	public MedicalRecordServiceImpl(MedicalRecordService medicalRecordMapper) {
+	private final MedicalRecordMapper medicalRecordMapper;
+	public MedicalRecordServiceImpl(MedicalRecordMapper medicalRecordMapper) {
 		this.medicalRecordMapper = medicalRecordMapper;
 	}
 	@Override

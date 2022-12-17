@@ -1,7 +1,7 @@
 package com.raisetech.lecture09.controller;
 
 import com.raisetech.lecture09.ResourceNotFoundException;
-import com.raisetech.lecture09.mapper.MedicalRecordService;
+import com.raisetech.lecture09.mapper.MedicalRecordMapper;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
 
 @RestController
 public class MedicalRecordController {
-	private final MedicalRecordService medicalRecordService;
-	public MedicalRecordController(MedicalRecordService medicalRecordService) {
+	private final MedicalRecordMapper medicalRecordService;
+	public MedicalRecordController(MedicalRecordMapper medicalRecordService) {
 		this.medicalRecordService = medicalRecordService;
 	}
 	@GetMapping("/medicalRecord")
