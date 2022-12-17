@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface MedicalRecordService {
 	List<MedicalRecord> findAll();
-	List<DiseaseResponse> byDisease();
+	List<DiseaseResponse> findByDisease(String disease);
 }
