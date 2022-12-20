@@ -1,7 +1,7 @@
 package com.raisetech.lecture09.mapper;
 
-import com.raisetech.lecture09.controller.DiseaseResponse;
 import com.raisetech.lecture09.entity.MedicalRecord;
+import com.raisetech.lecture09.responses.DiseaseResponse;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

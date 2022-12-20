@@ -1,4 +1,4 @@
-package com.raisetech.lecture09.controller;
+package com.raisetech.lecture09.responses;
 
 import com.raisetech.lecture09.entity.MedicalRecord;
 

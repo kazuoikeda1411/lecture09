@@ -1,8 +1,10 @@
 package com.raisetech.lecture09.service;
 
-import com.raisetech.lecture09.controller.DiseaseResponse;
 import com.raisetech.lecture09.entity.MedicalRecord;
+import com.raisetech.lecture09.exeption.ResourceNotFoundException;
 import com.raisetech.lecture09.mapper.MedicalRecordMapper;
+import com.raisetech.lecture09.request.DiseaseRequest;
+import com.raisetech.lecture09.responses.DiseaseResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +20,11 @@ public class MedicalRecordServiceImpl implements com.raisetech.lecture09.service
 		return medicalRecordMapper.findAll();
 	}
 	@Override
-	public List<DiseaseResponse> findByDisease(String disease) {
-		return this.medicalRecordMapper.findByDisease(disease);
+	public List<DiseaseResponse> findByDisease(DiseaseRequest disease) {
+		if (this.medicalRecordMapper.findByDisease(disease.getDisease()).isEmpty()) {
+			throw new ResourceNotFoundException("resource not found");
+		} else {
+			return this.medicalRecordMapper.findByDisease(disease.getDisease());
+		}
 	}
 }

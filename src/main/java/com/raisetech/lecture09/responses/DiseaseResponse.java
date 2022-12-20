@@ -1,4 +1,4 @@
-package com.raisetech.lecture09.controller;
+package com.raisetech.lecture09.responses;
 
 public record DiseaseResponse(String name, String disease) {
 }
